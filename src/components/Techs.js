@@ -7,8 +7,7 @@ import { motion } from "framer-motion"
 import { useMediaQuery } from '@chakra-ui/media-query'
 
 function Techs() {
-
-    const [isNotSmallerScreen] = useMediaQuery("(min-width:500px)");
+  const [isNotSmallerScreen] = useMediaQuery("(min-width:500px)");
 
   return (
     <VStack
@@ -39,9 +38,15 @@ function Techs() {
           w="100%"
           spacing={isNotSmallerScreen ? "0" : "10"}
           flexDirection={isNotSmallerScreen ? "row" : "column"}
-          //justifyContent={isNotSmallerScreen ? "center" : "space-between"}
         >
-          <HStack w="100%" mr="5" spacing="10" display="flex" alignItems="center" justifyContent={isNotSmallerScreen ? "flex-end" : "space-between"} >
+          <HStack
+            w="100%"
+            mr="5"
+            spacing="10"
+            display="flex"
+            alignItems="center"
+            justifyContent={isNotSmallerScreen ? "flex-end" : "space-between"}
+          >
             <Icon as={FaHtml5} boxSize="50" />
             <Icon as={FaCss3} boxSize="50" />
             <Icon as={FaJs} boxSize="50" />
@@ -49,16 +54,21 @@ function Techs() {
             <Icon as={FaReact} boxSize="50" />
           </HStack>
 
-          <HStack w="100%" ml="5" spacing="10" display="flex" alignItems="center" justifyContent={isNotSmallerScreen ? "flex-start" : "space-between"}>
+          <HStack
+            w="100%"
+            ml="5"
+            spacing="10"
+            display="flex"
+            alignItems="center"
+            justifyContent={isNotSmallerScreen ? "flex-start" : "space-between"}
+          >
             <Icon as={FaNode} boxSize="50" />
             <Icon as={SiNextdotjs} boxSize="50" />
             <Icon as={SiChakraui} boxSize="50" />
             <Icon as={SiExpress} boxSize="50" />
             <Icon as={SiMongodb} boxSize="50" />
           </HStack>
-
         </VStack>
-
       </motion.div>
     </VStack>
   );
