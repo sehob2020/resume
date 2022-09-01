@@ -13,7 +13,7 @@ function Social() {
         <VStack>
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
                 <Text fontWeight="thin" textAlign="center" fontSize="1xl" letterSpacing="5px" pb="9px">hoberg.sebastian@gmail.com</Text>
-                <HStack spacing={isNotSmallerScreen ? "24" : "20"}>
+                <HStack spacing={isNotSmallerScreen ? "24" : "10"}>
                     <Icon as={FaLinkedin} boxSize="50" cursor="pointer" onClick={() => 
                         window.open("https://www.linkedin.com/in/sebastian-hoberg-ba2a77140/")
                     } />
