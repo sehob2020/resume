@@ -7,13 +7,18 @@ import { motion } from "framer-motion"
 
 function Social() {
 
-    const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
+    const [isNotSmallerScreen] = useMediaQuery("(min-width:500px)");
 
     return (
         <VStack>
             <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
                 <Text fontWeight="thin" textAlign="center" fontSize="1xl" letterSpacing="5px" pb="9px">hoberg.sebastian@gmail.com</Text>
-                <HStack spacing={isNotSmallerScreen ? "24" : "10"}>
+                <HStack 
+                spacing={isNotSmallerScreen ? "20" : "0"} 
+                //flexDirection={isNotSmallerScreen ? "row" : "column"} 
+                justifyContent={isNotSmallerScreen ? "center" : "space-between"}
+                >
+
                     <Icon as={FaLinkedin} boxSize="50" cursor="pointer" onClick={() => 
                         window.open("https://www.linkedin.com/in/sebastian-hoberg-ba2a77140/")
                     } />

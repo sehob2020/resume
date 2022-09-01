@@ -8,24 +8,57 @@ import { useMediaQuery } from '@chakra-ui/media-query'
 
 function Techs() {
 
-    const [isNotSmallerScreen] = useMediaQuery("(min-width:600px)");
+    const [isNotSmallerScreen] = useMediaQuery("(min-width:500px)");
 
   return (
-    <VStack display="flex" alignItems="center" justifyContent="center" h="full" w="100%">
-      <motion.div initial={{ opacity: 0 }} animate={{ opacity: 1 }} transition={{ duration: 1 }}>
-        <Text display="flex" alignItems="center" justifyContent="center" pb="20px" letterSpacing={isNotSmallerScreen ? "5px" : "2px"}>Frontend Developer - EC Utbildning Helsingborg 2020 / 2022</Text>
-        <HStack display="flex" w="100%" spacing={isNotSmallerScreen ? "24" : "0"} justifyContent={isNotSmallerScreen ? "flex-start" : "space-between"}>
-          <Icon as={FaHtml5} boxSize="50"/>
-          <Icon as={FaCss3} boxSize="50"/>
-          <Icon as={FaJs} boxSize="50"/>
-          <Icon as={SiTypescript} boxSize="50"/>
-          <Icon as={FaReact} boxSize="50"/>
-          <Icon as={FaNode} boxSize="50"/>
-          <Icon as={SiNextdotjs} boxSize="50"/>
-          <Icon as={SiChakraui} boxSize="50"/>
-          <Icon as={SiExpress} boxSize="50"/>
-          <Icon as={SiMongodb} boxSize="50"/>
-        </HStack>
+    <VStack
+      display="flex"
+      alignItems="center"
+      justifyContent="center"
+      h="full"
+      w="100%"
+    >
+      <motion.div
+        initial={{ opacity: 0 }}
+        animate={{ opacity: 1 }}
+        transition={{ duration: 1 }}
+      >
+        <Text
+          display="flex"
+          alignItems="center"
+          justifyContent="center"
+          pb="20px"
+          letterSpacing={isNotSmallerScreen ? "5px" : "0px"}
+          fontSize={isNotSmallerScreen ? "1xl" : "15"}
+        >
+          Frontend Developer - EC Utbildning Helsingborg 2020 / 2022
+        </Text>
+
+        <VStack
+          display="flex"
+          w="100%"
+          spacing={isNotSmallerScreen ? "0" : "10"}
+          flexDirection={isNotSmallerScreen ? "row" : "column"}
+          //justifyContent={isNotSmallerScreen ? "center" : "space-between"}
+        >
+          <HStack w="100%" mr="5" spacing="10" display="flex" alignItems="center" justifyContent={isNotSmallerScreen ? "flex-end" : "space-between"} >
+            <Icon as={FaHtml5} boxSize="50" />
+            <Icon as={FaCss3} boxSize="50" />
+            <Icon as={FaJs} boxSize="50" />
+            <Icon as={SiTypescript} boxSize="50" />
+            <Icon as={FaReact} boxSize="50" />
+          </HStack>
+
+          <HStack w="100%" ml="5" spacing="10" display="flex" alignItems="center" justifyContent={isNotSmallerScreen ? "flex-start" : "space-between"}>
+            <Icon as={FaNode} boxSize="50" />
+            <Icon as={SiNextdotjs} boxSize="50" />
+            <Icon as={SiChakraui} boxSize="50" />
+            <Icon as={SiExpress} boxSize="50" />
+            <Icon as={SiMongodb} boxSize="50" />
+          </HStack>
+
+        </VStack>
+
       </motion.div>
     </VStack>
   );
